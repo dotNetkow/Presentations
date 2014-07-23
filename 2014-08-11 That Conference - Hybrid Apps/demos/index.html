@@ -9,17 +9,8 @@
     <body>
     
 
-    <!-- STEP 1a: data-role="view" -->
-    <div id="profile" data-role="view"  >
-
-		<!-- STEP 2 -->
-		<div data-role="footer">
-		    <div data-role="tabstrip">
-		        <a href="#profile" data-icon="toprated">Profile</a>
-		        <a href="#settings" data-icon="settings">Settings</a>
-		    </div></div>
-		<!-- STEP 2 END -->
-
+    <!-- STEP 1a -->
+    <div id="profile" data-role="view" >  <!-- data-role="view" -->
 	    <ul data-role="listview" data-type="group">
 	        <li>Profile
 	            <ul>
@@ -27,14 +18,12 @@
 	                <li>Brand Manager at Marketing Team</li>
 	            </ul>
 	        </li>
-
 	        <li>Password
 	            <ul>
 	                <li>User cannot change password <input data-role="switch" checked="checked" /></li>
 	                <li>Password never expires <input data-role="switch" /></li>
 	            </ul>
 	        </li>
-
 	        <li>Newsletter Subscription
 	            <ul>
 	                <li>Subscribed <input data-role="switch" /></li>
@@ -42,16 +31,38 @@
 	        </li>
 	    </ul>
 	</div>
+	<!-- STEP 1a END -->
 
+	<!-- STEP 2 -->
 	<div id="settings" data-role="view">
+		<ul data-role="listview" data-type="group">
+	        <li>Settings
+	        	<ul><li>More stuff here!</li></ul>
+	        </li>
+	    </ul>
 	</div>
+	<!-- STEP 2 END -->
+
+	<!-- STEP 3a --> 
+	<div data-role="layout" data-id="layout">
+		<div data-role="footer">
+		    <div data-role="tabstrip">
+		        <a href="#profile" data-icon="toprated">Profile</a>
+		        <a href="#settings" data-icon="settings">Settings</a>
+		    </div>
+		</div>
+	</div>
+	<!-- STEP 3a END -->
 
 	<script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
 
     <script>
     	// STEP 1b
-    	var app = new kendo.mobile.Application(document.body);
+    	var app = new kendo.mobile.Application(document.body, { });
+    	
+    	// STEP 3b
+    	// layout: "layout", transition: "slide"
 	</script>
     </body>
 </html>
