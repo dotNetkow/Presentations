@@ -10,9 +10,9 @@
     
 
     <!-- STEP 1a -->
-    <div id="profile" data-role="view"  >  <!-- data-role="view" -->
+    <div id="profile" data-role="view" >  <!-- data-role="view" -->
     <!-- data-role="listview" -->
-	    <ul data-role="listview"  data-type="group">
+	    <ul data-role="listview" data-type="group">
 	        <li>Profile
 	            <ul>
 	                <li><img src="eduardo.jpg" /><h2 style="display: inline-block;">Eduardo Saavedra</h2></li>
@@ -45,11 +45,11 @@
 	<!-- STEP 2 END -->
 
 	<!-- STEP 3a --> 
-	<div data-role="layout" data-id="changeMe">
+	<div data-role="layout" data-id="footerLayout">
 		<div data-role="footer">
 		    <div data-role="tabstrip">
 		        <a href="#profile" data-icon="toprated">Profile</a>
-		        <a href="#settings" data-icon="settings">Settings</a>
+		        <a href="#settings" data-icon="about">Settings</a>
 		    </div>
 		</div>
 	</div>
@@ -60,10 +60,10 @@
 
     <script>
     	// STEP 1b
-    	var app = new kendo.mobile.Application(document.body, { layout: "changeMe", transition: "slide" });
+    	var app = new kendo.mobile.Application(document.body, { layout: "footerLayout", transition: "slide" });
     	
     	// STEP 3b
-    	// layout: "layout", transition: "slide"
+    	// layout: "footerLayout", transition: "slide"
 	</script>
     </body>
 </html>
