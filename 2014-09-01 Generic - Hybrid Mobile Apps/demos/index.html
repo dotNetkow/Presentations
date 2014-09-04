@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width">
+        
+        <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    </head>
+    <body>
+    
+
+    <!-- STEP 1a -->
+    <div id="profile" data-role="view" >  <!-- data-role="view" -->
+    <!-- data-role="listview" -->
+	    <ul data-type="group" data-role="listview">
+	        <li>Profile
+	            <ul>
+	                <li><img src="eduardo.jpg" /><h2 style="display: inline-block;">Eduardo Saavedra</h2></li>
+	                <li>Brand Manager at Marketing Team</li>
+	            </ul>
+	        </li>
+	        <li>Password
+	            <ul>
+	                <li>User cannot change password <input data-role="switch" checked="checked" /></li>
+	                <li>Password never expires <input data-role="switch" /></li>
+	            </ul>
+	        </li>
+	        <li>Newsletter Subscription
+	            <ul>
+	                <li>Subscribed <input data-role="switch" /></li>
+	            </ul>
+	        </li>
+	    </ul>
+	</div>
+	<!-- STEP 1a END -->
+
+	<!-- STEP 2 -->
+	<div id="settings" data-role="view">
+		<ul data-role="listview" data-type="group">
+	        <li>Settings
+	        	<ul><li>More stuff here!</li></ul>
+	        </li>
+	    </ul>
+	</div>
+	<!-- STEP 2 END -->
+
+	<!-- STEP 3a --> 
+	<div data-role="layout" data-id="footerLayout">
+		<div data-role="footer">
+		    <div data-role="tabstrip">
+		        <a href="#profile" data-icon="toprated">Profile</a>
+		        <a href="#settings" data-icon="settings">Settings</a>
+		    </div>
+		</div>
+	</div>
+	<!-- STEP 3a END -->
+
+	<script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+
+    <script>
+    	// STEP 1b
+    	var app = new kendo.mobile.Application(document.body, { layout: "footerLayout", transition: "slide"});
+    	
+    	// STEP 3b
+    	// layout: "footerLayout", transition: "slide"
+	</script>
+    </body>
+</html>
